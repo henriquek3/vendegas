@@ -1,8 +1,7 @@
 {
   "require": {
     "components/jquery": "3.2.1",
-    "components/jqueryui": "1.12.1",
-    "twbs/bootstrap": "4.0.0-alpha.6",
-    "semantic/ui": "2.2.10"
+    "components/font-awesome": "4.2.0",
+    "twbs/bootstrap": "v3.3.0"
   }
 }

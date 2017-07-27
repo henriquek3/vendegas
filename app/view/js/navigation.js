@@ -10,13 +10,10 @@ $(document).ready(function () {
             url: urli,
             dataType: 'html'
         });
-
         request.done(function (response) {
             console.log('request done!');
-            $('#page-inner').html(response);
+            $('#conteudo').html(response);
         });
-
-
         return false;
     });
 

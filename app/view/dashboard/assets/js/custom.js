@@ -1,4 +1,3 @@
-
 /*=============================================================
     Authour URI: www.binarycart.com
     Version: 1.1
@@ -195,8 +194,8 @@
                 hideHover: 'auto',
                 resize: true
             });
-           
-     
+
+
         },
 
         initialization: function () {

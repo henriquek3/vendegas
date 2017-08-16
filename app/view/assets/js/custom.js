@@ -1,13 +1,13 @@
 /*=============================================================
- Authour URI: www.binarycart.com
- Version: 1.1
- License: MIT
+    Authour URI: www.binarycart.com
+    Version: 1.1
+    License: MIT
+    
+    http://opensource.org/licenses/MIT
 
- http://opensource.org/licenses/MIT
-
- 100% To use For Personal And Commercial Use.
-
- ========================================================  */
+    100% To use For Personal And Commercial Use.
+   
+    ========================================================  */
 
 (function ($) {
     "use strict";
@@ -15,13 +15,13 @@
 
         main_fun: function () {
             /*====================================
-             METIS MENU
-             ======================================*/
+            METIS MENU 
+            ======================================*/
             $('#main-menu').metisMenu();
 
             /*====================================
-             LOAD APPROPRIATE MENU BAR
-             ======================================*/
+              LOAD APPROPRIATE MENU BAR
+           ======================================*/
             $(window).bind("load resize", function () {
                 if ($(this).width() < 768) {
                     $('div.sidebar-collapse').addClass('collapse')
@@ -31,8 +31,8 @@
             });
 
             /*====================================
-             MORRIS BAR CHART
-             ======================================*/
+            MORRIS BAR CHART
+         ======================================*/
             Morris.Bar({
                 element: 'morris-bar-chart',
                 data: [{
@@ -72,8 +72,8 @@
             });
 
             /*====================================
-             MORRIS DONUT CHART
-             ======================================*/
+          MORRIS DONUT CHART
+       ======================================*/
             Morris.Donut({
                 element: 'morris-donut-chart',
                 data: [{
@@ -90,8 +90,8 @@
             });
 
             /*====================================
-             MORRIS AREA CHART
-             ======================================*/
+         MORRIS AREA CHART
+      ======================================*/
 
             Morris.Area({
                 element: 'morris-area-chart',
@@ -155,8 +155,8 @@
             });
 
             /*====================================
-             MORRIS LINE CHART
-             ======================================*/
+    MORRIS LINE CHART
+ ======================================*/
             Morris.Line({
                 element: 'morris-line-chart',
                 data: [{

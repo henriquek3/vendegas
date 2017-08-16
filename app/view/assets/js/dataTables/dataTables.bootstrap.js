@@ -51,25 +51,25 @@ if ($.fn.dataTable.Api) {
                         case 'first':
                             btnDisplay = lang.sFirst;
                             btnClass = button + (page > 0 ?
-                                    '' : ' disabled');
+                                '' : ' disabled');
                             break;
 
                         case 'previous':
                             btnDisplay = lang.sPrevious;
                             btnClass = button + (page > 0 ?
-                                    '' : ' disabled');
+                                '' : ' disabled');
                             break;
 
                         case 'next':
                             btnDisplay = lang.sNext;
                             btnClass = button + (page < pages - 1 ?
-                                    '' : ' disabled');
+                                '' : ' disabled');
                             break;
 
                         case 'last':
                             btnDisplay = lang.sLast;
                             btnClass = button + (page < pages - 1 ?
-                                    '' : ' disabled');
+                                '' : ' disabled');
                             break;
 
                         default:

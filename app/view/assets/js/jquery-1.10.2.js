@@ -595,15 +595,15 @@
 
     var Sizzle =
         /*!
-         * Sizzle CSS Selector Engine v1.10.16
-         * http://sizzlejs.com/
-         *
-         * Copyright 2013 jQuery Foundation, Inc. and other contributors
-         * Released under the MIT license
-         * http://jquery.org/license
-         *
-         * Date: 2014-01-13
-         */
+ * Sizzle CSS Selector Engine v1.10.16
+ * http://sizzlejs.com/
+ *
+ * Copyright 2013 jQuery Foundation, Inc. and other contributors
+ * Released under the MIT license
+ * http://jquery.org/license
+ *
+ * Date: 2014-01-13
+ */
         (function (window) {
 
             var i,
@@ -654,15 +654,15 @@
                 slice = arr.slice,
                 // Use a stripped-down indexOf if we can't use a native one
                 indexOf = arr.indexOf || function (elem) {
-                        var i = 0,
-                            len = this.length;
-                        for (; i < len; i++) {
-                            if (this[i] === elem) {
-                                return i;
-                            }
+                    var i = 0,
+                        len = this.length;
+                    for (; i < len; i++) {
+                        if (this[i] === elem) {
+                            return i;
                         }
-                        return -1;
-                    },
+                    }
+                    return -1;
+                },
 
                 booleans = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
 
@@ -1087,7 +1087,7 @@
                 }
 
                 /* Attributes
-                 ---------------------------------------------------------------------- */
+	---------------------------------------------------------------------- */
 
                 // Support: IE<8
                 // Verify that getAttribute really returns attributes and not properties (excepting IE8 booleans)
@@ -1097,7 +1097,7 @@
                 });
 
                 /* getElement(s)By*
-                 ---------------------------------------------------------------------- */
+	---------------------------------------------------------------------- */
 
                 // Check if getElementsByTagName("*") returns only elements
                 support.getElementsByTagName = assert(function (div) {
@@ -1107,15 +1107,15 @@
 
                 // Check if getElementsByClassName can be trusted
                 support.getElementsByClassName = rnative.test(doc.getElementsByClassName) && assert(function (div) {
-                        div.innerHTML = "<div class='a'></div><div class='a i'></div>";
+                    div.innerHTML = "<div class='a'></div><div class='a i'></div>";
 
-                        // Support: Safari<4
-                        // Catch class over-caching
-                        div.firstChild.className = "i";
-                        // Support: Opera<10
-                        // Catch gEBCN failure to find non-leading classes
-                        return div.getElementsByClassName("i").length === 2;
-                    });
+                    // Support: Safari<4
+                    // Catch class over-caching
+                    div.firstChild.className = "i";
+                    // Support: Opera<10
+                    // Catch gEBCN failure to find non-leading classes
+                    return div.getElementsByClassName("i").length === 2;
+                });
 
                 // Support: IE<10
                 // Check if getElementById returns elements by name
@@ -1184,13 +1184,13 @@
 
                 // Class
                 Expr.find["CLASS"] = support.getElementsByClassName && function (className, context) {
-                        if (typeof context.getElementsByClassName !== strundefined && documentIsHTML) {
-                            return context.getElementsByClassName(className);
-                        }
-                    };
+                    if (typeof context.getElementsByClassName !== strundefined && documentIsHTML) {
+                        return context.getElementsByClassName(className);
+                    }
+                };
 
                 /* QSA/matchesSelector
-                 ---------------------------------------------------------------------- */
+	---------------------------------------------------------------------- */
 
                 // QSA and matchesSelector support
 
@@ -1281,7 +1281,7 @@
                 rbuggyMatches = rbuggyMatches.length && new RegExp(rbuggyMatches.join("|"));
 
                 /* Contains
-                 ---------------------------------------------------------------------- */
+	---------------------------------------------------------------------- */
                 hasCompare = rnative.test(docElem.compareDocumentPosition);
 
                 // Element contains another
@@ -1292,10 +1292,10 @@
                         var adown = a.nodeType === 9 ? a.documentElement : a,
                             bup = b && b.parentNode;
                         return a === bup || !!( bup && bup.nodeType === 1 && (
-                                adown.contains ?
-                                    adown.contains(bup) :
-                                    a.compareDocumentPosition && a.compareDocumentPosition(bup) & 16
-                            ));
+                            adown.contains ?
+                                adown.contains(bup) :
+                                a.compareDocumentPosition && a.compareDocumentPosition(bup) & 16
+                        ));
                     } :
                     function (a, b) {
                         if (b) {
@@ -1309,7 +1309,7 @@
                     };
 
                 /* Sorting
-                 ---------------------------------------------------------------------- */
+	---------------------------------------------------------------------- */
 
                 // Document order sorting
                 sortOrder = hasCompare ?
@@ -1582,15 +1582,15 @@
 
                     "CHILD": function (match) {
                         /* matches from matchExpr["CHILD"]
-                         1 type (only|nth|...)
-                         2 what (child|of-type)
-                         3 argument (even|odd|\d*|\d*n([+-]\d+)?|...)
-                         4 xn-component of xn+y argument ([+-]?\d*n|)
-                         5 sign of xn-component
-                         6 x of xn-component
-                         7 sign of y-component
-                         8 y of y-component
-                         */
+				1 type (only|nth|...)
+				2 what (child|of-type)
+				3 argument (even|odd|\d*|\d*n([+-]\d+)?|...)
+				4 xn-component of xn+y argument ([+-]?\d*n|)
+				5 sign of xn-component
+				6 x of xn-component
+				7 sign of y-component
+				8 y of y-component
+			*/
                         match[1] = match[1].toLowerCase();
 
                         if (match[1].slice(0, 3) === "nth") {
@@ -2072,7 +2072,7 @@
                     // Filters
                     for (type in Expr.filter) {
                         if ((match = matchExpr[type].exec(soFar)) && (!preFilters[type] ||
-                            (match = preFilters[type](match)))) {
+                                (match = preFilters[type](match)))) {
                             matched = match.shift();
                             tokens.push({
                                 value: matched,
@@ -2306,9 +2306,9 @@
                     }, implicitRelative, true),
                     matchers = [function (elem, context, xml) {
                         return ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
-                                (checkContext = context).nodeType ?
-                                    matchContext(elem, context, xml) :
-                                    matchAnyContext(elem, context, xml) );
+                            (checkContext = context).nodeType ?
+                                matchContext(elem, context, xml) :
+                                matchAnyContext(elem, context, xml) );
                     }];
 
                 for (; i < len; i++) {
@@ -2329,8 +2329,8 @@
                             return setMatcher(
                                 i > 1 && elementMatcher(matchers),
                                 i > 1 && toSelector(
-                                    // If the preceding token was a descendant combinator, insert an implicit any-element `*`
-                                    tokens.slice(0, i - 1).concat({value: tokens[i - 2].type === " " ? "*" : ""})
+                                // If the preceding token was a descendant combinator, insert an implicit any-element `*`
+                                tokens.slice(0, i - 1).concat({value: tokens[i - 2].type === " " ? "*" : ""})
                                 ).replace(rtrim, "$1"),
                                 matcher,
                                 i < j && matcherFromTokens(tokens.slice(i, j)),
@@ -3050,27 +3050,27 @@
     }
 
     /*
-     * Create a callback list using the following parameters:
-     *
-     *	options: an optional list of space-separated options that will change how
-     *			the callback list behaves or a more traditional option object
-     *
-     * By default a callback list will act like an event callback list and can be
-     * "fired" multiple times.
-     *
-     * Possible options:
-     *
-     *	once:			will ensure the callback list can only be fired once (like a Deferred)
-     *
-     *	memory:			will keep track of previous values and will call any callback added
-     *					after the list has been fired right away with the latest "memorized"
-     *					values (like a Deferred)
-     *
-     *	unique:			will ensure a callback can only be added once (no duplicate in the list)
-     *
-     *	stopOnFalse:	interrupt callings when a callback returns false
-     *
-     */
+ * Create a callback list using the following parameters:
+ *
+ *	options: an optional list of space-separated options that will change how
+ *			the callback list behaves or a more traditional option object
+ *
+ * By default a callback list will act like an event callback list and can be
+ * "fired" multiple times.
+ *
+ * Possible options:
+ *
+ *	once:			will ensure the callback list can only be fired once (like a Deferred)
+ *
+ *	memory:			will keep track of previous values and will call any callback added
+ *					after the list has been fired right away with the latest "memorized"
+ *					values (like a Deferred)
+ *
+ *	unique:			will ensure a callback can only be added once (no duplicate in the list)
+ *
+ *	stopOnFalse:	interrupt callings when a callback returns false
+ *
+ */
     jQuery.Callbacks = function (options) {
 
         // Convert options from String-formatted to Object-formatted if needed
@@ -4000,11 +4000,11 @@
         _queueHooks: function (elem, type) {
             var key = type + "queueHooks";
             return jQuery._data(elem, key) || jQuery._data(elem, key, {
-                    empty: jQuery.Callbacks("once memory").add(function () {
-                        jQuery._removeData(elem, type + "queue");
-                        jQuery._removeData(elem, key);
-                    })
-                });
+                empty: jQuery.Callbacks("once memory").add(function () {
+                    jQuery._removeData(elem, type + "queue");
+                    jQuery._removeData(elem, key);
+                })
+            });
         }
     });
 
@@ -4256,9 +4256,9 @@
     }
 
     /*
-     * Helper functions for managing events -- not part of the public interface.
-     * Props to Dean Edwards' addEvent library for many of the ideas.
-     */
+ * Helper functions for managing events -- not part of the public interface.
+ * Props to Dean Edwards' addEvent library for many of the ideas.
+ */
     jQuery.event = {
 
         global: {},
@@ -4909,9 +4909,9 @@
             this.isDefaultPrevented = src.defaultPrevented ||
             src.defaultPrevented === undefined && (
                 // Support: IE < 9
-            src.returnValue === false ||
-            // Support: Android < 4.0
-            src.getPreventDefault && src.getPreventDefault() ) ?
+                src.returnValue === false ||
+                // Support: Android < 4.0
+                src.getPreventDefault && src.getPreventDefault() ) ?
                 returnTrue :
                 returnFalse;
 
@@ -5265,7 +5265,7 @@
     }
 
     var nodeNames = "abbr|article|aside|audio|bdi|canvas|data|datalist|details|figcaption|figure|footer|" +
-            "header|hgroup|mark|meter|nav|output|progress|section|summary|time|video",
+        "header|hgroup|mark|meter|nav|output|progress|section|summary|time|video",
         rinlinejQuery = / jQuery\d+="(?:null|\d+)"/g,
         rnoshimcache = new RegExp("<(?:" + nodeNames + ")[\\s/>]", "i"),
         rleadingWhitespace = /^\s+/,
@@ -5879,7 +5879,7 @@
             // We can't cloneNode fragments that contain checked, in WebKit
             if (isFunction ||
                 ( l > 1 && typeof value === "string" &&
-                !support.checkClone && rchecked.test(value) )) {
+                    !support.checkClone && rchecked.test(value) )) {
                 return this.each(function (index) {
                     var self = set.eq(index);
                     if (isFunction) {
@@ -6560,10 +6560,10 @@
 
     function augmentWidthOrHeight(elem, name, extra, isBorderBox, styles) {
         var i = extra === ( isBorderBox ? "border" : "content" ) ?
-                // If we already have the right measurement, avoid augmentation
-                4 :
-                // Otherwise initialize for horizontal or vertical properties
-                name === "width" ? 1 : 0,
+            // If we already have the right measurement, avoid augmentation
+            4 :
+            // Otherwise initialize for horizontal or vertical properties
+            name === "width" ? 1 : 0,
 
             val = 0;
 
@@ -6630,14 +6630,14 @@
 
         // use the active box-sizing model to add/subtract irrelevant styles
         return ( val +
-                augmentWidthOrHeight(
-                    elem,
-                    name,
-                    extra || ( isBorderBox ? "border" : "content" ),
-                    valueIsBorderBox,
-                    styles
-                )
-            ) + "px";
+            augmentWidthOrHeight(
+                elem,
+                name,
+                extra || ( isBorderBox ? "border" : "content" ),
+                valueIsBorderBox,
+                styles
+            )
+        ) + "px";
     }
 
     jQuery.extend({
@@ -8334,9 +8334,9 @@
                 for (; i < len; i++) {
                     elem = this[i];
                     cur = elem.nodeType === 1 && ( elem.className ?
-                                ( " " + elem.className + " " ).replace(rclass, " ") :
-                                " "
-                        );
+                            ( " " + elem.className + " " ).replace(rclass, " ") :
+                            " "
+                    );
 
                     if (cur) {
                         j = 0;
@@ -8376,9 +8376,9 @@
                     elem = this[i];
                     // This expression is here for better compressibility (see addClass)
                     cur = elem.nodeType === 1 && ( elem.className ?
-                                ( " " + elem.className + " " ).replace(rclass, " ") :
-                                ""
-                        );
+                            ( " " + elem.className + " " ).replace(rclass, " ") :
+                            ""
+                    );
 
                     if (cur) {
                         j = 0;
@@ -8466,8 +8466,8 @@
 
 
     jQuery.each(("blur focus focusin focusout load resize scroll unload click dblclick " +
-    "mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
-    "change select submit keydown keypress keyup error contextmenu").split(" "), function (i, name) {
+        "mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
+        "change select submit keydown keypress keyup error contextmenu").split(" "), function (i, name) {
 
         // Handle event binding
         jQuery.fn[name] = function (data, fn) {
@@ -8589,21 +8589,21 @@
         rurl = /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
 
         /* Prefilters
-         * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
-         * 2) These are called:
-         *    - BEFORE asking for a transport
-         *    - AFTER param serialization (s.data is a string if s.processData is true)
-         * 3) key is the dataType
-         * 4) the catchall symbol "*" can be used
-         * 5) execution will start with transport dataType and THEN continue down to "*" if needed
-         */
+	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
+	 * 2) These are called:
+	 *    - BEFORE asking for a transport
+	 *    - AFTER param serialization (s.data is a string if s.processData is true)
+	 * 3) key is the dataType
+	 * 4) the catchall symbol "*" can be used
+	 * 5) execution will start with transport dataType and THEN continue down to "*" if needed
+	 */
         prefilters = {},
 
         /* Transports bindings
-         * 1) key is the dataType
-         * 2) the catchall symbol "*" can be used
-         * 3) selection will start with transport dataType and THEN go to "*" if needed
-         */
+	 * 1) key is the dataType
+	 * 2) the catchall symbol "*" can be used
+	 * 3) selection will start with transport dataType and THEN go to "*" if needed
+	 */
         transports = {},
 
         // Avoid comment-prolog char sequence (#10098); must appease lint and evade compression
@@ -8701,9 +8701,9 @@
     }
 
     /* Handles responses to an ajax request:
-     * - finds the right dataType (mediates between content-type and expected dataType)
-     * - returns the corresponding response
-     */
+ * - finds the right dataType (mediates between content-type and expected dataType)
+ * - returns the corresponding response
+ */
     function ajaxHandleResponses(s, jqXHR, responses) {
         var firstDataType, ct, finalDataType, type,
             contents = s.contents,
@@ -8757,8 +8757,8 @@
     }
 
     /* Chain conversions given the request and the original response
-     * Also sets the responseXXX fields on the jqXHR instance
-     */
+ * Also sets the responseXXX fields on the jqXHR instance
+ */
     function ajaxConvert(s, response, jqXHR, isSuccess) {
         var conv2, current, conv, tmp, prev,
             converters = {},
@@ -8871,16 +8871,16 @@
             async: true,
             contentType: "application/x-www-form-urlencoded; charset=UTF-8",
             /*
-             timeout: 0,
-             data: null,
-             dataType: null,
-             username: null,
-             password: null,
-             cache: null,
-             throws: false,
-             traditional: false,
-             headers: {},
-             */
+		timeout: 0,
+		data: null,
+		dataType: null,
+		username: null,
+		password: null,
+		cache: null,
+		throws: false,
+		traditional: false,
+		headers: {},
+		*/
 
             accepts: {
                 "*": allTypes,
@@ -9086,8 +9086,8 @@
                 parts = rurl.exec(s.url.toLowerCase());
                 s.crossDomain = !!( parts &&
                     ( parts[1] !== ajaxLocParts[1] || parts[2] !== ajaxLocParts[2] ||
-                    ( parts[3] || ( parts[1] === "http:" ? "80" : "443" ) ) !==
-                    ( ajaxLocParts[3] || ( ajaxLocParts[1] === "http:" ? "80" : "443" ) ) )
+                        ( parts[3] || ( parts[1] === "http:" ? "80" : "443" ) ) !==
+                        ( ajaxLocParts[3] || ( ajaxLocParts[1] === "http:" ? "80" : "443" ) ) )
                 );
             }
 
@@ -9457,7 +9457,7 @@
         // Opera reports offsetWidths and offsetHeights less than zero on some elements
         return elem.offsetWidth <= 0 && elem.offsetHeight <= 0 ||
             (!support.reliableHiddenOffsets() &&
-            ((elem.style && elem.style.display) || jQuery.css(elem, "display")) === "none");
+                ((elem.style && elem.style.display) || jQuery.css(elem, "display")) === "none");
     };
 
     jQuery.expr.filters.visible = function (elem) {
@@ -9864,9 +9864,9 @@
 
         var callbackName, overwritten, responseContainer,
             jsonProp = s.jsonp !== false && ( rjsonp.test(s.url) ?
-                        "url" :
-                        typeof s.data === "string" && !( s.contentType || "" ).indexOf("application/x-www-form-urlencoded") && rjsonp.test(s.data) && "data"
-                );
+                    "url" :
+                    typeof s.data === "string" && !( s.contentType || "" ).indexOf("application/x-www-form-urlencoded") && rjsonp.test(s.data) && "data"
+            );
 
         // Handle iff the expected data type is "jsonp" or we have a parameter to set
         if (jsonProp || s.dataTypes[0] === "jsonp") {
@@ -10015,8 +10015,8 @@
                     responseText);
 
             }).complete(callback && function (jqXHR, status) {
-                    self.each(callback, response || [jqXHR.responseText, status, jqXHR]);
-                });
+                self.each(callback, response || [jqXHR.responseText, status, jqXHR]);
+            });
         }
 
         return this;

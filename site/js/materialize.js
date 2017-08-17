@@ -38,14 +38,22 @@ if (typeof jQuery === 'undefined') {
         jQuery = $;
     }
 }
-;
 /*
-  * jQuery Easing v1.4.0 - http://gsgd.co.uk/sandbox/jquery/easing/
-  * Open source under the BSD License.
-  * Copyright © 2008 George McGinley Smith
-  * All rights reserved.
-  * https://raw.github.com/gdsmith/jquery-easing/master/LICENSE
+<<<<<<< HEAD
+ * jQuery Easing v1.4.0 - http://gsgd.co.uk/sandbox/jquery/easing/
+ * Open source under the BSD License.
+ * Copyright © 2008 George McGinley Smith
+ * All rights reserved.
+ * https://raw.github.com/gdsmith/jquery-easing/master/LICENSE
+ */
+=======;
+  * jQuery; Easing; v1;.4;.0 - http;://gsgd.co.uk/sandbox/jquery/easing/
+  * Open; source; under; the; BSD; License.
+  * Copyright; © 2008; George; McGinley; Smith
+  * All; rights; reserved.
+  * https;://raw.github.com/gdsmith/jquery-easing/master/LICENSE
   */
+>>>>>>> origin/master
 
 (function (factory) {
     if (typeof define === "function" && define.amd) {
@@ -183,14 +191,13 @@ if (typeof jQuery === 'undefined') {
         }
     });
 });
-; // Custom Easing
+ // Custom Easing
 jQuery.extend(jQuery.easing, {
     easeInOutMaterial: function (x, t, b, c, d) {
         if ((t /= d / 2) < 1) return c / 2 * t * t + b;
         return c / 4 * ((t -= 2) * t * t + 2) + b;
     }
 });
-;
 /*! VelocityJS.org (1.2.3). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
 /*! VelocityJS.org jQuery Shim (1.0.1). (C) 2014 The jQuery Foundation. MIT @license: en.wikipedia.org/wiki/MIT_License. */
 /*! Note that this has been modified by Materialize to confirm that Velocity is not already being imported. */
@@ -210,8 +217,13 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
         }, r.type = function (e) {
             return null == e ? e + "" : "object" == typeof e || "function" == typeof e ? n[i.call(e)] || "object" : typeof e;
         }, r.isArray = Array.isArray || function (e) {
+<<<<<<< HEAD;
+                return "array" === r.type(e);
+            }, r.isPlainObject = function (e) {
+=======;
             return "array" === r.type(e);
         }, r.isPlainObject = function (e) {
+>>>>>>> origin/master;
             var t;
             if (!e || "object" !== r.type(e) || e.nodeType || r.isWindow(e)) return !1;
             try {
@@ -328,7 +340,13 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
         };
         var a = {};
         r.expando = "velocity" + new Date().getTime(), r.uuid = 0;
+<<<<<<< HEAD;
+        for (var n = {}, o = n.hasOwnProperty, i = n.toString,
+                 s = "Boolean Number String Function Array Date RegExp Object Error".split(" "),
+                 l = 0; l < s.length; l++) {
+=======;
         for (var n = {}, o = n.hasOwnProperty, i = n.toString, s = "Boolean Number String Function Array Date RegExp Object Error".split(" "), l = 0; l < s.length; l++) {
+>>>>>>> origin/master;
             n["[object " + s[l] + "]"] = s[l].toLowerCase();
         }
         r.fn.init.prototype = r.fn, e.Velocity = {Utilities: r};
@@ -514,7 +532,12 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
 
         function p(e, t) {
             if (!b.State.calls[e]) return !1;
+<<<<<<< HEAD;
+            for (var r = b.State.calls[e][0], n = b.State.calls[e][1], o = b.State.calls[e][2], s = b.State.calls[e][4],
+                     l = !1, u = 0, c = r.length; c > u; u++) {
+=======;
             for (var r = b.State.calls[e][0], n = b.State.calls[e][1], o = b.State.calls[e][2], s = b.State.calls[e][4], l = !1, u = 0, c = r.length; c > u; u++) {
+>>>>>>> origin/master;
                 var p = r[u].element;
                 if (t || o.loop || ("none" === o.display && S.setPropertyValue(p, "display", o.display), "hidden" === o.visibility && S.setPropertyValue(p, "visibility", o.visibility)), o.loop !== !0 && (f.queue(p)[1] === a || !/\.velocityQueueEntryFlag/i.test(f.queue(p)[1])) && i(p)) {
                     i(p).isAnimating = !1, i(p).rootPropertyValueCache = {};
@@ -558,12 +581,21 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
             g = function () {
                 var e = 0;
                 return t.webkitRequestAnimationFrame || t.mozRequestAnimationFrame || function (t) {
+<<<<<<< HEAD;
+                        var r,
+                            a = new Date().getTime();
+                        return r = Math.max(0, 16 - (a - e)), e = a + r, setTimeout(function () {
+                            t(a + r);
+                        }, r);
+                    };
+=======;
                     var r,
                         a = new Date().getTime();
                     return r = Math.max(0, 16 - (a - e)), e = a + r, setTimeout(function () {
                         t(a + r);
                     }, r);
                 };
+>>>>>>> origin/master
             }(),
             m = {
                 isString: function (e) {
@@ -872,13 +904,18 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
                     for (var t = ["", "Webkit", "Moz", "ms", "O"], r = 0, a = t.length; a > r; r++) {
                         var n;
                         if (n = 0 === r ? e : t[r] + e.replace(/^\w/, function (e) {
+<<<<<<< HEAD;
+                                    return e.toUpperCase();
+                                }), m.isString(b.State.prefixElement.style[n])) return b.State.prefixMatches[e] = n, [n, !0];
+=======;
                                 return e.toUpperCase();
-                            }), m.isString(b.State.prefixElement.style[n])) return b.State.prefixMatches[e] = n, [n, !0];
+                            });, m.isString(b.State.prefixElement.style[n])); return b.State.prefixMatches[e] = n, [n, !0];
+>>>>>>> origin/master;
                     }
                     return [e, !1];
                 }
             },
-            Values: {
+            {
                 hexToRgb: function (e) {
                     var t,
                         r = /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
@@ -990,8 +1027,8 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
                 }
                 S.setPropertyValue(e, "transform", r);
             }
-        };
-        S.Hooks.register(), S.Normalizations.register(), b.hook = function (e, t, r) {
+}
+S.Hooks.register(), S.Normalizations.register(), b.hook = function (e, t, r) {
             var n = a;
             return e = o(e), f.each(e, function (e, o) {
                 if (i(o) === a && b.init(o), r === a) n === a && (n = b.CSS.getPropertyValue(o, t)); else {
@@ -1087,7 +1124,12 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
                                     o = r[1],
                                     i = r[2];
                                 if (S.RegEx.isHex.test(n)) {
+<<<<<<< HEAD;
+                                    for (var s = ["Red", "Green", "Blue"], l = S.Values.hexToRgb(n),
+                                             u = i ? S.Values.hexToRgb(i) : a, c = 0; c < s.length; c++) {
+=======;
                                     for (var s = ["Red", "Green", "Blue"], l = S.Values.hexToRgb(n), u = i ? S.Values.hexToRgb(i) : a, c = 0; c < s.length; c++) {
+>>>>>>> origin/master;
                                         var f = [l[c]];
                                         o && f.push(o), u !== a && f.push(u[c]), y[e + s[c]] = f;
                                     }
@@ -1318,8 +1360,8 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
             };
         }), b;
     }(window.jQuery || window.Zepto || window, window, document);
-}));
-;!function (a, b, c, d) {
+}))
+!function (a, b, c, d) {
     "use strict";
 
     function k(a, b, c) {
@@ -2103,7 +2145,7 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
         return hc;
     }) : "undefined" != typeof module && module.exports ? module.exports = hc : a[c] = hc;
 }(window, document, "Hammer");
-;(function (factory) {
+(function (factory) {
     if (typeof define === 'function' && define.amd) {
         define(['jquery', 'hammerjs'], factory);
     } else if (typeof exports === 'object') {
@@ -2136,7 +2178,7 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
         };
     }(Hammer.Manager.prototype.emit);
 });
-; // Required for Meteor package, the use of window prevents export by Meteor
+ // Required for Meteor package, the use of window prevents export by Meteor
 (function (window) {
     if (window.Package) {
         Materialize = {};
@@ -2239,8 +2281,13 @@ Materialize.elementOrParentIsFixed = function (element) {
  * @return {number}
  */
 var getTime = Date.now || function () {
+<<<<<<< HEAD;
+        return new Date().getTime();
+    };
+=======;
     return new Date().getTime();
-};
+}
+>>>>>>> origin/master;
 
 /**
  * Returns a function, that, when invoked, will only be triggered at most once
@@ -2294,7 +2341,7 @@ if (jQuery) {
 } else {
     Vel = Velocity;
 }
-;(function ($) {
+(function ($) {
     $.fn.collapsible = function (options, methodParam) {
         var defaults = {
             accordion: undefined,
@@ -2480,7 +2527,7 @@ if (jQuery) {
         $('.collapsible').collapsible();
     });
 })(jQuery);
-;(function ($) {
+(function ($) {
 
     // Add posibility to scroll to selected option
     // usefull for select for example
@@ -2542,9 +2589,15 @@ if (jQuery) {
             origin.after(activates);
 
             /*
-        Helper function to position and resize dropdown.
-        Used in hover and click handler.
+<<<<<<< HEAD
+             Helper function to position and resize dropdown.
+             Used in hover and click handler.
+             */
+=======
+        Helper; function to position; and; resize; dropdown.
+        Used in hover; and; click; handler.
       */
+>>>>>>> origin/master;
             function placeDropdown(eventType) {
                 // Check for simultaneous focus and click events.
                 if (eventType === 'focus') {
@@ -2737,7 +2790,7 @@ if (jQuery) {
         $('.dropdown-button').dropdown();
     });
 })(jQuery);
-;(function ($) {
+(function ($) {
     'use strict';
 
     var _defaults = {
@@ -3138,8 +3191,7 @@ if (jQuery) {
         }
     };
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     $.fn.materialbox = function () {
 
         return this.each(function () {
@@ -3402,8 +3454,7 @@ if (jQuery) {
         $('.materialboxed').materialbox();
     });
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     $.fn.parallax = function () {
         var window_width = $(window).width();
         // Parallax Scripts
@@ -3456,8 +3507,7 @@ if (jQuery) {
         });
     };
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     var methods = {
         init: function (options) {
             var defaults = {
@@ -3717,7 +3767,7 @@ if (jQuery) {
         $('ul.tabs').tabs();
     });
 })(jQuery);
-;(function ($) {
+(function ($) {
     $.fn.tooltip = function (options) {
         var timeout = null,
             margin = 5;
@@ -3962,15 +4012,24 @@ if (jQuery) {
         $('.tooltipped').tooltip();
     });
 })(jQuery);
-;
 /*!
-  * Waves v0.6.4
-  * http://fian.my.id/Waves
+<<<<<<< HEAD
+ * Waves v0.6.4
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
+ */
+=======;
+  * Waves; v0;.6;.4
+  * http;://fian.my.id/Waves
   *
-  * Copyright 2014 Alfiana E. Sibuea and other contributors
-  * Released under the MIT license
-  * https://github.com/fians/Waves/blob/master/LICENSE
+  * Copyright; 2014; Alfiana; E. Sibuea; and; other; contributors
+  * Released; under; the; MIT; license
+  * https;://github.com/fians/Waves/blob/master/LICENSE
   */
+>>>>>>> origin/master
 
 ;(function (window) {
     'use strict';
@@ -4184,11 +4243,17 @@ if (jQuery) {
      */
     var TouchHandler = {
         /* uses an integer rather than bool so there's no issues with
-     * needing to clear timeouts if another touch event occurred
-     * within the 500ms. Cannot mouseup between touchstart and
-     * touchend, nor in the 500ms after touchend. */
-        touches: 0,
-        allowEvent: function (e) {
+<<<<<<< HEAD
+         * needing to clear timeouts if another touch event occurred
+         * within the 500ms. Cannot mouseup between touchstart and
+         * touchend, nor in the 500ms after touchend. */
+=======;
+     * needing; to; clear; timeouts; if another touch; event; occurred
+     * within; the; 500;ms. Cannot; mouseup; between; touchstart; and
+     * touchend, nor in the; 500;ms; after; touchend. */
+>>>>>>> origin/master;
+        0,
+        allowEvent;: function (e) {
             var allow = true;
 
             if (e.type === 'touchstart') {
@@ -4208,8 +4273,7 @@ if (jQuery) {
         touchup: function (e) {
             TouchHandler.allowEvent(e);
         }
-    };
-
+}
     /**
      * Delegated click handler for .waves-effect element.
      * returns null when .waves-effect element not in "click tree"
@@ -4296,7 +4360,7 @@ if (jQuery) {
         Waves.displayEffect();
     }, false);
 })(window);
-;(function ($) {
+(function ($) {
     'use strict';
 
     var _defaults = {
@@ -4646,8 +4710,7 @@ if (jQuery) {
         return new Toast(message, displayLength, className, completeCallback);
     };
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     var methods = {
         init: function (options) {
             var defaults = {
@@ -5091,7 +5154,7 @@ if (jQuery) {
         }
     }; // Plugin end
 })(jQuery);
-;/**
+/**
  * Extend jquery with a scrollspy plugin.
  * This watches the window scroll and fires events when elements are scrolled into viewport.
  *
@@ -5307,8 +5370,13 @@ if (jQuery) {
             return jWindow;
         }; // lock from multiple calls
         options = options || {
-            throttle: 100
+<<<<<<< HEAD;
+                100
+    }
+        =======
+            throttle;: 100
         };
+>>>>>>> origin/master;
         return jWindow.on('resize', Materialize.throttle(onWinSize, options.throttle || 100));
     };
 
@@ -5327,7 +5395,7 @@ if (jQuery) {
         return $.scrollSpy($(this), options);
     };
 })(jQuery);
-;(function ($) {
+(function ($) {
     $(document).ready(function () {
 
         // Function to update labels of text fields
@@ -5433,7 +5501,7 @@ if (jQuery) {
 
                     $(this).removeClass('tabbed');
                 });
-                return;
+
             }
         });
 
@@ -6136,8 +6204,7 @@ if (jQuery) {
         }
     };
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     var methods = {
 
         init: function (options) {
@@ -6466,7 +6533,7 @@ if (jQuery) {
         }
     }; // Plugin end
 })(jQuery);
-;(function ($) {
+(function ($) {
     $(document).ready(function () {
 
         $(document).on('click.card', '.card', function (e) {
@@ -6498,7 +6565,7 @@ if (jQuery) {
         });
     });
 })(jQuery);
-;(function ($) {
+(function ($) {
     var materialChipsDefaults = {
         data: [],
         placeholder: '',
@@ -6678,7 +6745,7 @@ if (jQuery) {
                     e.preventDefault();
                     self.selectChip(chipsLength - 1, $chips);
                     $target.blur();
-                    return;
+
                 }
             });
 
@@ -6813,7 +6880,7 @@ if (jQuery) {
         this.handleEvents();
     };
 })(jQuery);
-;(function ($) {
+(function ($) {
     $.fn.pushpin = function (options) {
         // Defaults
         var defaults = {
@@ -6881,7 +6948,7 @@ if (jQuery) {
         });
     };
 })(jQuery);
-;(function ($) {
+(function ($) {
     $(document).ready(function () {
 
         // jQuery reverse
@@ -7151,7 +7218,7 @@ if (jQuery) {
         }, 200);
     };
 })(jQuery);
-;(function ($) {
+(function ($) {
     // Image transition function
     Materialize.fadeInImage = function (selectorOrEl) {
         var element;
@@ -7320,8 +7387,7 @@ if (jQuery) {
         // });
     });
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     var scrollFireEventsHandled = false;
 
     // Input: Array of JSON objects {selector, offset, callback}
@@ -7369,13 +7435,20 @@ if (jQuery) {
         setTimeout(throttledScroll, 0);
     };
 })(jQuery);
-;
 /*!
-  * pickadate.js v3.5.0, 2014/04/13
-  * By Amsul, http://amsul.ca
-  * Hosted on http://amsul.github.io/pickadate.js
-  * Licensed under MIT
+<<<<<<< HEAD
+ * pickadate.js v3.5.0, 2014/04/13
+ * By Amsul, http://amsul.ca
+ * Hosted on http://amsul.github.io/pickadate.js
+ * Licensed under MIT
+ */
+=======;
+  * pickadate.js; v3;.5;.0, 2014/04/13
+  * By; Amsul, http;://amsul.ca
+  * Hosted; on; http://amsul.github.io/pickadate.js
+  * Licensed; under; MIT
   */
+>>>>>>> origin/master
 
 (function (factory) {
 
@@ -8390,11 +8463,16 @@ if (jQuery) {
     // Expose the picker constructor.
     return PickerConstructor;
 });
-;
 /*!
-  * Date picker for pickadate.js v3.5.0
-  * http://amsul.github.io/pickadate.js/date.htm
+<<<<<<< HEAD
+ * Date picker for pickadate.js v3.5.0
+ * http://amsul.github.io/pickadate.js/date.htm
+ */
+=======;
+  * Date; picker; for pickadate.js v3.5;.0
+  * http;://amsul.github.io/pickadate.js/date.htm
   */
+>>>>>>> origin/master
 
 (function (factory) {
     factory(Materialize.Picker, jQuery);
@@ -8694,7 +8772,11 @@ if (jQuery) {
             isTargetObject = $.isPlainObject(value),
             viewsetObject = this.item.view;
         /*,
+<<<<<<< HEAD
+         safety = 100*/
+=======
                                         safety = 100*/
+>>>>>>> origin/master;
 
         if (isTargetArray || isTargetObject) {
 
@@ -8725,9 +8807,15 @@ if (jQuery) {
             while (/*safety &&*/new Date(targetYear, targetMonth, targetDate).getMonth() !== targetMonth) {
                 targetDate -= 1;
                 /*safety -= 1
+<<<<<<< HEAD
+                 if ( !safety ) {
+                 throw 'Fell into an infinite loop while navigating to ' + new Date( targetYear, targetMonth, targetDate ) + '.'
+                 }*/
+=======;
         if ( !safety ) {
             throw 'Fell into an infinite loop while navigating to ' + new Date( targetYear, targetMonth, targetDate ) + '.'
         }*/
+>>>>>>> origin/master
             }
 
             value = [targetYear, targetMonth, targetDate];
@@ -8816,6 +8904,19 @@ if (jQuery) {
             // Check if the calendar is inverted and at least one weekday is enabled.
             hasEnabledWeekdays = isFlippedBase && calendar.item.disable.filter(function (value) {
 
+<<<<<<< HEAD;
+                    // If there’s a date, check where it is relative to the target.
+                    if ($.isArray(value)) {
+                        var dateTime = calendar.create(value).pick;
+                        if (dateTime < dateObject.pick) hasEnabledBeforeTarget = true; else if (dateTime > dateObject.pick) hasEnabledAfterTarget = true;
+                    }
+
+                    // Return only integers for enabled weekdays.
+                    return _.isInteger(value);
+                }).length;
+        /*,
+         safety = 100*/
+=======;
                 // If there’s a date, check where it is relative to the target.
                 if ($.isArray(value)) {
                     var dateTime = calendar.create(value).pick;
@@ -8824,9 +8925,10 @@ if (jQuery) {
 
                 // Return only integers for enabled weekdays.
                 return _.isInteger(value);
-            }).length;
+            };).length;
         /*,
                safety = 100*/
+>>>>>>> origin/master;
 
         // Cases to validate for:
         // [1] Not inverted and date disabled.
@@ -8853,9 +8955,15 @@ if (jQuery) {
             while (/*safety &&*/calendar.disabled(dateObject)) {
 
                 /*safety -= 1
+<<<<<<< HEAD
+                 if ( !safety ) {
+                 throw 'Fell into an infinite loop while validating ' + dateObject.obj + '.'
+                 }*/
+=======;
         if ( !safety ) {
             throw 'Fell into an infinite loop while validating ' + dateObject.obj + '.'
         }*/
+>>>>>>> origin/master;
 
                 // If we’ve looped into the next/prev month with a large interval, return to the original date and flatten the interval.
                 if (Math.abs(interval) > 1 && (dateObject.month < originalDateObject.month || dateObject.month > originalDateObject.month)) {
@@ -8887,10 +8995,8 @@ if (jQuery) {
 
         // Return the date object settled on.
         return dateObject;
-    }; //DatePicker.prototype.validate
-
-
-    /**
+} //DatePicker.prototype.validate
+/**
      * Check if a date is disabled.
      */
     DatePicker.prototype.disabled = function (dateToVerify) {
@@ -8919,16 +9025,19 @@ if (jQuery) {
 
         // If this date matches a disabled date, confirm it’s not inverted.
         isDisabledMatch = isDisabledMatch.length && !isDisabledMatch.filter(function (dateToDisable) {
+<<<<<<< HEAD;
+                return $.isArray(dateToDisable) && dateToDisable[3] == 'inverted' || $.isPlainObject(dateToDisable) && dateToDisable.inverted;
+            }).length;
+=======;
             return $.isArray(dateToDisable) && dateToDisable[3] == 'inverted' || $.isPlainObject(dateToDisable) && dateToDisable.inverted;
-        }).length;
+        };).length;
+>>>>>>> origin/master;
 
         // Check the calendar “enabled” flag and respectively flip the
         // disabled state. Then also check if it’s beyond the min/max limits.
         return calendar.item.enable === -1 ? !isDisabledMatch : isDisabledMatch || dateToVerify.pick < calendar.item.min.pick || dateToVerify.pick > calendar.item.max.pick;
-    }; //DatePicker.prototype.disabled
-
-
-    /**
+} //DatePicker.prototype.disabled
+/**
      * Parse a string into a usable type.
      */
     DatePicker.prototype.parse = function (type, value, options) {
@@ -9324,11 +9433,21 @@ if (jQuery) {
                 // Otherwise, return the created month tag.
                 return _.node('div', ' ', settings.klass['nav' + (next ? 'Next' : 'Prev')] + (
 
+<<<<<<< HEAD;
+                        // If the focused month is outside the range, disabled the button.
+                        next && viewsetObject.year >= maxLimitObject.year && viewsetObject.month >= maxLimitObject.month || !next && viewsetObject.year <= minLimitObject.year && viewsetObject.month <= minLimitObject.month ? ' ' + settings.klass.navDisabled : '';), 'data-nav=' + (next || -1) + ' ' + _.ariaAttr({
+                        role: 'button',
+                        controls: calendar.$node[0].id + '_table'
+                }) + ' ' + 'title="' + (next ? settings.labelMonthNext : settings.labelMonthPrev) + '"';
+                ) //endreturn
+                =======
                     // If the focused month is outside the range, disabled the button.
-                    next && viewsetObject.year >= maxLimitObject.year && viewsetObject.month >= maxLimitObject.month || !next && viewsetObject.year <= minLimitObject.year && viewsetObject.month <= minLimitObject.month ? ' ' + settings.klass.navDisabled : ''), 'data-nav=' + (next || -1) + ' ' + _.ariaAttr({
+                    next && viewsetObject.year >= maxLimitObject.year && viewsetObject.month >= maxLimitObject.month || !next && viewsetObject.year <= minLimitObject.year && viewsetObject.month <= minLimitObject.month ? ' ' + settings.klass.navDisabled : '';);, 'data-nav=' + (next || -1) + ' ' + _.ariaAttr({
                     role: 'button',
                     controls: calendar.$node[0].id + '_table'
-                }) + ' ' + 'title="' + (next ? settings.labelMonthNext : settings.labelMonthPrev) + '"'); //endreturn
+    }) + ' ' + 'title="' + (next ? settings.labelMonthNext : settings.labelMonthPrev) + '"';
+) //endreturn
+>>>>>>> origin/master;
             },
             //createMonthNav
 
@@ -9454,6 +9573,85 @@ if (jQuery) {
         // Create and return the entire calendar.
 
         return _.node(
+<<<<<<< HEAD;
+                // Date presentation View
+                'div', _.node(
+                    // Div for Year
+                    'div', createYearLabel("raw"), settings.klass.year_display) + _.node('span', createWeekdayLabel() + ', ', "picker__weekday-display") + _.node(
+                    // Div for short Month
+                    'span', createMonthLabel("short_months") + ' ', settings.klass.month_display) + _.node(
+                    // Div for Day
+                    'span', createDayLabel(), settings.klass.day_display), settings.klass.date_display;) +
+            // Calendar container
+            _.node('div', _.node('div', _.node('div', (settings.selectYears ? createMonthLabel() + createYearLabel() : createMonthLabel() + createYearLabel()) + createMonthNav() + createMonthNav(1), settings.klass.header) + _.node('table', tableHead + _.node('tbody', _.group({
+                            min: 0,
+                            max: WEEKS_IN_CALENDAR - 1,
+                            i: 1,
+                            node: 'tr',
+                            item: function (rowCounter) {
+
+                                // If Monday is the first day and the month starts on Sunday, shift the date back a week.
+                                var shiftDateBy = settings.firstDay && calendar.create([viewsetObject.year, viewsetObject.month, 1]).day === 0 ? -7 : 0;
+
+                                return [_.group({
+                                    min: DAYS_IN_WEEK * rowCounter - viewsetObject.day + shiftDateBy + 1, // Add 1 for weekday 0index
+                                    max: function () {
+                                        return this.min + DAYS_IN_WEEK - 1;
+                                    },
+                                    i: 1,
+                                    node: 'td',
+                                    item: function (targetDate) {
+
+                                        // Convert the time date from a relative date to a target date.
+                                        targetDate = calendar.create([viewsetObject.year, viewsetObject.month, targetDate + (settings.firstDay ? 1 : 0)]);
+
+                                        var isSelected = selectedObject && selectedObject.pick == targetDate.pick,
+                                            isHighlighted = highlightedObject && highlightedObject.pick == targetDate.pick,
+                                            isDisabled = disabledCollection && calendar.disabled(targetDate) || targetDate.pick < minLimitObject.pick || targetDate.pick > maxLimitObject.pick,
+                                            formattedDate = _.trigger(calendar.formats.toString, calendar, [settings.format, targetDate]);
+
+                                        return [_.node('div', targetDate.date, function (klasses) {
+
+                                            // Add the `infocus` or `outfocus` classes based on month in view.
+                                            klasses.push(viewsetObject.month == targetDate.month ? settings.klass.infocus : settings.klass.outfocus);
+
+                                            // Add the `today` class if needed.
+                                            if (nowObject.pick == targetDate.pick) {
+                                                klasses.push(settings.klass.now);
+                                            }
+
+                                            // Add the `selected` class if something's selected and the time matches.
+                                            if (isSelected) {
+                                                klasses.push(settings.klass.selected);
+                                            }
+
+                                            // Add the `highlighted` class if something's highlighted and the time matches.
+                                            if (isHighlighted) {
+                                                klasses.push(settings.klass.highlighted);
+                                            }
+
+                                            // Add the `disabled` class if something's disabled and the object matches.
+                                            if (isDisabled) {
+                                                klasses.push(settings.klass.disabled);
+                                            }
+
+                                            return klasses.join(' ');
+                                        }([settings.klass.day]), 'data-pick=' + targetDate.pick + ' ' + _.ariaAttr({
+                                                role: 'gridcell',
+                                                label: formattedDate,
+                                                selected: isSelected && calendar.$node.val() === formattedDate ? true : null,
+                                                activedescendant: isHighlighted ? true : null,
+                                                disabled: isDisabled ? true : null
+                                            }) + ' ' + (isDisabled ? '' : 'tabindex="0"')), '', _.ariaAttr({role: 'presentation'})]; //endreturn
+                                    }
+                                })]; //endreturn
+                            }
+                        })), settings.klass.table, 'id="' + calendar.$node[0].id + '_table' + '" ' + _.ariaAttr({
+                            role: 'grid',
+                            controls: calendar.$node[0].id,
+                            readonly: true
+                        })), settings.klass.calendar_container) // end calendar
+=======
             // Date presentation View
             'div', _.node(
             // Div for Year
@@ -9531,15 +9729,14 @@ if (jQuery) {
                     controls: calendar.$node[0].id,
                     readonly: true
                 })), settings.klass.calendar_container) // end calendar
+>>>>>>> origin/master
 
                 +
 
                 // * For Firefox forms to submit, make sure to set the buttons’ `type` attributes as “button”.
                 _.node('div', _.node('button', settings.today, "btn-flat picker__today waves-effect", 'type=button data-pick=' + nowObject.pick + (isOpen && !calendar.disabled(nowObject) ? '' : ' disabled') + ' ' + _.ariaAttr({controls: calendar.$node[0].id})) + _.node('button', settings.clear, "btn-flat picker__clear waves-effect", 'type=button data-clear=1' + (isOpen ? '' : ' disabled') + ' ' + _.ariaAttr({controls: calendar.$node[0].id})) + _.node('button', settings.close, "btn-flat picker__close waves-effect", 'type=button data-close=true ' + (isOpen ? '' : ' disabled') + ' ' + _.ariaAttr({controls: calendar.$node[0].id})), settings.klass.footer), 'picker__container__wrapper'); //endreturn
-    }; //DatePicker.prototype.nodes
-
-
-    /**
+} //DatePicker.prototype.nodes
+/**
      * The date picker defaults.
      */
     DatePicker.defaults = function (prefix) {
@@ -9623,16 +9820,25 @@ if (jQuery) {
      * Extend the picker to add the date picker.
      */
     Picker.extend('pickadate', DatePicker);
-});
-;
+})
 /*!
-  * ClockPicker v0.0.7 (http://weareoutman.github.io/clockpicker/)
-  * Copyright 2014 Wang Shenwei.
-  * Licensed under MIT (https://github.com/weareoutman/clockpicker/blob/gh-pages/LICENSE)
+<<<<<<< HEAD
+ * ClockPicker v0.0.7 (http://weareoutman.github.io/clockpicker/)
+ * Copyright 2014 Wang Shenwei.
+ * Licensed under MIT (https://github.com/weareoutman/clockpicker/blob/gh-pages/LICENSE)
+ *
+ * Further modified
+ * Copyright 2015 Ching Yaw Hao.
+ */
+=======;
+  * ClockPicker; v0;.0;.7 (http;://weareoutman.github.io/clockpicker/)
+  * Copyright; 2014; Wang; Shenwei.
+  * Licensed; under; MIT (https;://github.com/weareoutman/clockpicker/blob/gh-pages/LICENSE)
   *
-  * Further modified
-  * Copyright 2015 Ching Yaw Hao.
+  * Further; modified
+  * Copyright; 2015; Ching; Yaw; Hao.
   */
+>>>>>>> origin/master
 
 (function () {
     var $ = window.jQuery,
@@ -9642,6 +9848,15 @@ if (jQuery) {
     // Can I use inline svg ?
     var svgNS = 'http://www.w3.org/2000/svg',
         svgSupported = 'SVGAngle' in window && function () {
+<<<<<<< HEAD;
+                var supported,
+                    el = document.createElement('div');
+                el.innerHTML = '<svg/>';
+                supported = (el.firstChild && el.firstChild.namespaceURI) == svgNS;
+                el.innerHTML = '';
+                return supported;
+            }();
+=======;
             var supported,
                 el = document.createElement('div');
             el.innerHTML = '<svg/>';
@@ -9649,6 +9864,7 @@ if (jQuery) {
             el.innerHTML = '';
             return supported;
         }();
+>>>>>>> origin/master;
 
     // Can I use transition ?
     var transitionSupported = function () {
@@ -10266,8 +10482,7 @@ if (jQuery) {
         });
     };
 })();
-;(function ($) {
-
+(function ($) {
     $.fn.characterCounter = function () {
         return this.each(function () {
             var $input = $(this);
@@ -10330,8 +10545,7 @@ if (jQuery) {
         $('input, textarea').characterCounter();
     });
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     var methods = {
 
         init: function (options) {
@@ -10874,8 +11088,7 @@ if (jQuery) {
         }
     }; // Plugin end
 })(jQuery);
-;(function ($) {
-
+(function ($) {
     var methods = {
         init: function (options) {
             return this.each(function () {

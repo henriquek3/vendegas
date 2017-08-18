@@ -276,12 +276,18 @@ p {
     padding: 0;
 }
 
+/*=========================================================*/
+/*============ TROCAR A COR DE FUNDO DOS SIDEBAR MENU =====*/
+
 .sidebar-collapse .nav > li > a {
     color: #fff;
-    background: #202020;
+    background: darkgreen;
     text-shadow: none;
 
 }
+
+/*=========================================================*/
+/*============ TROCAR A COR DE FUNDO DOS SIDEBAR MENU =====*/
 
 .sidebar-collapse > .nav > li > a {
     padding: 15px 10px;

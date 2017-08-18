@@ -39,7 +39,7 @@
         else if (jQuery && !jQuery.fn.dataTable) {
             factory(jQuery);
         }
-    }
+    };
     (/** @lends <global> */function ($) {
         "use strict";
 

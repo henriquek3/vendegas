@@ -2,7 +2,7 @@
 <div class="page-title">
     <div>
         <h1><i class="fa fa-user-o"></i> Clientes</h1>
-        <p>Aqui são cadastradas todos os clientes, fornecedores e colaboradores.</p>
+        <p>Aqui são cadastrados todos os clientes, fornecedores e colaboradores.</p>
     </div>
     <div>
         <ul class="breadcrumb">
@@ -20,22 +20,23 @@
                     <div class="col-lg-12">
                         <div class="bs-component">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#home" data-toggle="tab">Pesquisar</a></li>
-                                <li><a href="#profile" data-toggle="tab">Cliente</a></li>
-                                <li><a href="#profile2" data-toggle="tab">Endereço</a></li>
+                                <li class="active"><a href="#tab-pesquisar" data-toggle="tab">Pesquisar</a></li>
+                                <li><a href="#tab-cliente" data-toggle="tab">Cliente</a></li>
+                                <li><a href="#tab-endereco" data-toggle="tab">Endereço</a></li>
                                 <li class="disabled"><a>Disabled</a></li>
-                                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras<span class="caret"></span></a>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#dropdown1" data-toggle="tab">Atividades</a></li>
-                                        <li><a href="#dropdown1" data-toggle="tab">Cidades</a></li>
+                                        <li><a href="#tab-atividades" data-toggle="tab">Atividades</a></li>
+                                        <li><a href="#tab-cidades" data-toggle="tab">Cidades</a></li>
                                         <li><a href="#dropdown1" data-toggle="tab">Estados</a></li>
                                         <li class="divider"></li>
-                                        <li><a href="#dropdown2" data-toggle="tab">Colaboradores</a></li>
+                                        <li><a href="#tab-colaboradores" data-toggle="tab">Colaboradores</a></li>
                                     </ul>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade active in" id="home">
+                                <div class="tab-pane fade active in" id="tab-pesquisar">
                                     <p></p>
                                     <table class="table table-hover table-bordered" id="sampleTable">
                                         <thead>
@@ -508,7 +509,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="tab-pane fade" id="profile">
+                                <div class="tab-pane fade" id="tab-cliente">
                                     <p></p>
                                     <div class="">
                                         <div class="card">
@@ -565,7 +566,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="profile2">
+                                <div class="tab-pane fade" id="tab-endereco">
                                     <p></p>
                                     <div class="">
                                         <div class="card">
@@ -622,7 +623,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="dropdown1">
+                                <div class="tab-pane fade" id="tab-atividades">
                                     <p></p>
                                     <div class="">
                                         <div class="card">
@@ -679,7 +680,64 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="dropdown2">
+                                <div class="tab-pane fade" id="tab-cidades">
+                                    <p></p>
+                                    <div class="">
+                                        <div class="card">
+                                            <h3 class="card-title">Alteração de Cadastros</h3>
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Name</label>
+                                                        <input class="form-control" type="text"
+                                                               placeholder="Enter full name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Email</label>
+                                                        <input class="form-control" type="email"
+                                                               placeholder="Enter email address">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Address</label>
+                                                        <textarea class="form-control" rows="4"
+                                                                  placeholder="Enter your address"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Gender</label>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" name="gender">Male
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label>
+                                                                <input type="radio" name="gender">Female
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label">Identity Proof</label>
+                                                        <input class="form-control" type="file">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox">I accept the terms and conditions
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card-footer">
+                                                <button class="btn btn-primary icon-btn" type="button"><i
+                                                        class="fa fa-fw fa-lg fa-check-circle"></i>Register
+                                                </button>&nbsp;&nbsp;&nbsp;<a class="btn btn-default icon-btn" href="#"><i
+                                                    class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-colaboradores">
                                     <p></p>
                                     <div class="">
                                         <div class="card">
@@ -744,6 +802,6 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="../js/plugins/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="../js/plugins/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript">$('#sampleTable').DataTable();</script>

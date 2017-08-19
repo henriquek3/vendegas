@@ -1,19 +1,17 @@
 $(document).ready(function () {
     $('.submenu').click(function () {
         let urli = $(this).attr('href');
-        console.log(urli);
 
-        if (urli == '#') {
+        if (urli === '#') {
             console.log(urli);
         } else {
             let request = $.ajax({
                 method: 'GET',
                 url: urli,
-                dataType: 'html',
-                type: 'HEAD'
+                dataType: 'html'
             });
             request.success(function (response) {
-                console.log('request done!');
+                console.log(response);
                 $('#content-pages').html(response);
             });
 

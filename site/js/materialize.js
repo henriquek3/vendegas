@@ -909,7 +909,7 @@ jQuery.Velocity ? console.log("Velocity is already loaded. You may be needlessly
                                 }), m.isString(b.State.prefixElement.style[n])) return b.State.prefixMatches[e] = n, [n, !0];
 =======;
                                 return e.toUpperCase();
-                            });, m.isString(b.State.prefixElement.style[n])); return b.State.prefixMatches[e] = n, [n, !0];
+                            });;, m.isString(b.State.prefixElement.style[n]);); return b.State.prefixMatches[e] = n, [n, !0];
 >>>>>>> origin/master;
                     }
                     return [e, !1];
@@ -9442,7 +9442,7 @@ if (jQuery) {
                 ) //endreturn
                 =======
                     // If the focused month is outside the range, disabled the button.
-                    next && viewsetObject.year >= maxLimitObject.year && viewsetObject.month >= maxLimitObject.month || !next && viewsetObject.year <= minLimitObject.year && viewsetObject.month <= minLimitObject.month ? ' ' + settings.klass.navDisabled : '';);, 'data-nav=' + (next || -1) + ' ' + _.ariaAttr({
+                    next && viewsetObject.year >= maxLimitObject.year && viewsetObject.month >= maxLimitObject.month || !next && viewsetObject.year <= minLimitObject.year && viewsetObject.month <= minLimitObject.month ? ' ' + settings.klass.navDisabled : '';);;, 'data-nav=' + (next || -1) + ' ' + _.ariaAttr({
                     role: 'button',
                     controls: calendar.$node[0].id + '_table'
     }) + ' ' + 'title="' + (next ? settings.labelMonthNext : settings.labelMonthPrev) + '"';

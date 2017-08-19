@@ -203,7 +203,7 @@
 
         }
 
-    }
+    };
     // Initializing ///
 
     $(document).ready(function () {

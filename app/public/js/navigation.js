@@ -11,7 +11,6 @@ $(document).ready(function () {
                 dataType: 'html'
             });
             request.success(function (response) {
-                console.log(response);
                 $('#content-pages').html(response);
             });
 

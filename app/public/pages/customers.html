@@ -34,6 +34,11 @@
                                         <li><a href="#tab-colaboradores" data-toggle="tab">Colaboradores</a></li>
                                     </ul>
                                 </li>
+                                <div style="float: right;"><a class="btn btn-primary btn-flat" href="#tab-cliente"
+                                                              data-toggle="tab"><i class="fa fa-lg fa-plus"></i></a><a
+                                        class="btn btn-info btn-flat" href="#"><i class="fa fa-lg fa-refresh"></i></a><a
+                                        class="btn btn-danger btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                                </div>
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade active in" id="tab-pesquisar">
@@ -850,3 +855,34 @@
 <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript">$('#sampleTable').DataTable();</script>
 <script type="text/javascript">$('#estadosTable').DataTable();</script>
+<script>$('tr').click(function () {
+    $('tr').css('backgroundColor', '');
+    $(this).css('backgroundColor', '#f0ad4e');
+});</script>
+<script>
+    $('.btn-danger').click(function () {
+        swal({
+                title: "Você tem certeza disso?",
+                text: "Uma vez deletado, não há como desfazer!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sim, delete isto!",
+                showLoaderOnConfirm: true,
+                closeOnConfirm: false
+            },
+            function () {
+                setTimeout(function () {
+                    swal("Deletado!", "Seu registro foi deletado.", "success");
+                }, 2000)
+            });
+    });
+</script>
+<script>
+    $('.btn-primary').click(function () {
+        setTimeout(function () {
+            $('#tab-cliente .form-control:first').css('backgroundColor', 'orange');
+            $('#tab-cliente .form-control:first').focus();
+        }, 1000)
+    });
+</script>

@@ -41,6 +41,12 @@ $app->get('/', function () {
     return ob_get_clean();
 });
 
+$app->get('/app', function () {
+    ob_start();
+    include __DIR__ . '/../templates/app/index.html';
+    return ob_get_clean();
+});
+
 $app->get('/clients/list', function () {
     ob_start();
     include __DIR__ . '/../templates/client/list.php';

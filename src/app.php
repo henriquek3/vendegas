@@ -17,9 +17,9 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         'driver' => 'pdo_mysql',
         'host' => 'localhost',
-        'dbname' => 'crud_jquery',
+        'dbname' => 'vendegasapp',
         'user' => 'root',
-        'password' => 'root'
+        'password' => ''
     ),
 ));
 
@@ -47,18 +47,11 @@ $app->get('/app', function () {
     return ob_get_clean();
 });
 
-$app->get('/clients/list', function () {
+$app->get('/customers', function () {
     ob_start();
-    include __DIR__ . '/../templates/client/list.php';
+    include __DIR__ . '/../templates/app/pages/customers.html';
     return ob_get_clean();
 });
-
-$app->get('/hello-world', function () {
-    ob_start();
-    include __DIR__ . '/../templates/minha-primeira-pagina.php';
-    return ob_get_clean();
-});
-
 
 /***************************************************/
 // ADMINISTRAÇÃO

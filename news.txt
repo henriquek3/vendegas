@@ -1,0 +1,1 @@
+destacar que ao longo do periodo de uso será possivel reduzir a quantidade do estoque baseado nas consultas de estoque.

@@ -19,7 +19,8 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'host' => 'localhost',
         'dbname' => 'vendegasapp',
         'user' => 'root',
-        'password' => ''
+        'password' => '',
+        'charset' => 'utf8mb4'
     ),
 ));
 
@@ -56,6 +57,21 @@ $app->get('/customers', function () {
 /***************************************************/
 // ADMINISTRAÇÃO
 /***************************************************/
+
+$app->get('api/estados', function (Request $request) use ($app) {
+    /** @var \Doctrine\DBAL\Connection $db */
+    $db = $app['db'];
+    $query = "SELECT * FROM estados";
+    $id = (int)$request->get('id');
+    $params = [];
+    if ($id > 0) {
+        $query .= " WHERE id = ?";
+        array_push($params, $id);
+    }
+    $result = $db->fetchAll($query, $params);
+    return $app->json($result);
+});
+
 
 $app->get('api/clients', function (Request $request) use ($app) {
     /** @var \Doctrine\DBAL\Connection $db */

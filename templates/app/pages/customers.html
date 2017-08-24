@@ -755,33 +755,7 @@
                                                     <th>Região</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>Tiger Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Garrett Winters</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ashton Cox</td>
-                                                    <td>Junior Technical Author</td>
-                                                    <td>San Francisco</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Cedric Kelly</td>
-                                                    <td>Senior Javascript Developer</td>
-                                                    <td>Edinburgh</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Airi Satou</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                </tr>
-                                                </tbody>
+                                                <tbody id="estadosTableBody"></tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -853,36 +827,4 @@
 </div>
 <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
-<script type="text/javascript">$('#sampleTable').DataTable();</script>
-<script type="text/javascript">$('#estadosTable').DataTable();</script>
-<script>$('tr').click(function () {
-    $('tr').css('backgroundColor', '');
-    $(this).css('backgroundColor', '#f0ad4e');
-});</script>
-<script>
-    $('.btn-danger').click(function () {
-        swal({
-                title: "Você tem certeza disso?",
-                text: "Uma vez deletado, não há como desfazer!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sim, delete isto!",
-                showLoaderOnConfirm: true,
-                closeOnConfirm: false
-            },
-            function () {
-                setTimeout(function () {
-                    swal("Deletado!", "Seu registro foi deletado.", "success");
-                }, 2000)
-            });
-    });
-</script>
-<script>
-    $('.btn-primary').click(function () {
-        setTimeout(function () {
-            $('#tab-cliente .form-control:first').css('backgroundColor', 'orange');
-            $('#tab-cliente .form-control:first').focus();
-        }, 1000)
-    });
-</script>
+<script src="js/pages/customers.js"></script>

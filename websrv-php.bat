@@ -1,1 +1,1 @@
-php -S localhost:8001 -t public public/index.php
+php -S localhost:8001 -t vendegas.com.br vendegas.com.br/index.php

@@ -54,6 +54,13 @@ $app->get('/customers', function () {
     return ob_get_clean();
 });
 
+$app->get('/teste', function () {
+    //ob_start();
+    //include __DIR__ . '/../templates/app/pages/customers.html';
+    //return ob_get_clean();
+    return "<h1>Teste OK Jovem!</h1>";
+});
+
 /***************************************************/
 // ADMINISTRAÇÃO
 /***************************************************/
@@ -71,7 +78,6 @@ $app->get('api/estados', function (Request $request) use ($app) {
     $result = $db->fetchAll($query, $params);
     return $app->json($result);
 });
-
 
 $app->get('api/clients', function (Request $request) use ($app) {
     /** @var \Doctrine\DBAL\Connection $db */
@@ -119,4 +125,3 @@ $app->post('api/clients/delete', function (Request $request) use ($app) {
 });
 
 $app->run();
-
